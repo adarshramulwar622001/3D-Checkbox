@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="3D_Checkbox.css">
+	<script type="text/javascript">
+		document.querySelector(".lever").addEventListener("change", function(){
+			this.classList.remove("pristine");
+			let ac = "aria-checked";
+			this.setAttribute(ac,this.getAttribute(ac) == "true" ? "false" : "true");
+		});
+	</script>
+</head>
+<body>
+	<form>
+		<input type="checkbox" name="lever" class="lever pristine" id="lever" value="lever value" role="switch" aria-label="lever" aria-checked="false">
+		<label for="lever"><span>On</span></label>
+		<label for="lever"><span>Off</span></label>
+	</form>
+</body>
+</html>
